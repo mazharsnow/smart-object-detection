@@ -102,7 +102,7 @@ pip install -r Requirements.txt
 
 | Input | Output |
 |-------|--------|
-| ![Input Image](path/to/input.jpg) | ![Output Image](path/to/output.jpg) |
+| ![Input Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Input%20Images/room.jpg) | ![Output Image]([path/to/output.jpg](https://github.com/mazharsnow/smart-object-detection/blob/master/Output%20images/output_room.jpg)) |
 
 *(Replace the image paths with your actual samples once uploaded.)*
 
