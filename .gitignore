@@ -1,0 +1,17 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Large / binary files
+*.pt
+*.pyd
+*.dll
+*.mp4
+*.jpg
+*.png
+runs/
+
+# System junk
+.DS_Store
+Thumbs.db
