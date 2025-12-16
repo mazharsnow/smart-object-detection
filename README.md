@@ -1,50 +1,131 @@
-# Object-Detection-and-Distance-Measurement
+# 🧠 Smart Object Detection (YOLOv8)
 
-This repository contains object_detection in python which is able to perform the following task -
+Smart Object Detection is a modern, real-time object detection system powered by YOLOv8, OpenCV, and PyTorch. It detects multiple objects in both images and videos, displaying and saving annotated results automatically in dedicated folders.
 
-    - Object detection from live video frame or in a image
-    - Counting the number of objects in a frame and segmentation
-    - Measuring the distance of object using depth information
+## 🚀 Features
 
-For object detection YOLO-V3 has been used which is able to detect 80 different objects. Some of those are-
+* 🖼️ Detect objects in images and videos
+* ⚡ Real-time FPS tracking for video detection
+* 💾 Automatically saves processed outputs in organized folders
+* 🔍 Powered by Ultralytics YOLOv8 — the latest in real-time computer vision
+* 🧰 Easy to customize and extend
 
-    - person
-    - car
-    - bus
-    - stop sign
-    - bench
-    - dog
-    - bear
-    - backpack and so on.
+## 📂 Folder Structure
 
-## Theory
+```
+smart-object-detection/
+│
+├── Input Frame/        # Place your input videos here
+├── Input Images/       # Place your input images here
+├── Output Frame/       # Processed videos with detection boxes
+├── Output images/      # Processed images with bounding boxes
+│
+├── image_detection_yolov8.py   # Script for image detection
+├── video_detection_yolov8.py   # Script for video detection
+├── yolov8n.pt                  # YOLOv8 Nano weights
+├── Requirements.txt            # Dependencies list
+├── README.md                   # Documentation
+└── .gitignore                  # Ignored files (e.g. venv, runs, media)
+```
 
-In a traditional image classification approach for object detection there are two well-known strategies.
+## ⚙️ Installation
 
-For single object in a image there are two scenarios.
+### 1️⃣ Clone the Repository
 
-    1. Classification
-    2. Localization
+```bash
+git clone https://github.com/mazharsnow/smart-object-detection.git
+cd smart-object-detection
+```
 
-For multiple objects in a image there are two scenarios.
+### 2️⃣ Create a Virtual Environment
 
-    1. Object detection and localization
-    2. Object segmentation
-    
-## How the object detection works?
-From the initial part we understood that, to measure distance from an image we to localize it first to get the depth        information. Now, how actually localization works?
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
 
-### Localize objects with regression
-Regression is about returning a number istead of a class. The number can be represented as (x0,y0,width,height) which are related to a bounding box. In the images illustrated above for single object if you want to only classify the object type then we don't need to draw the bounding box around that object that's why this part is known as Classification . However, if we are interested to know where does this object locates in the image then we need to know that 4 numbers that a regreesion layer will return. As you can see there is a black rectangle shape box in the image of white dog which was drawn using the regression layer. What happens here is that after the final convolutional layer + Fully connected layers instead of asking for class scores to compare with some offsets a regression layer is introduced. Regression layer is nothing but some rectangular box which represents individual objects. For every frame/image to detect objects the following things happens.
-    
-    
-## References
-1. https://sci-hub.tw/10.1109/SAS.2010.5439423
-2. http://emaraic.com/blog/distance-measurement
-3. https://www.pyimagesearch.com/2016/04/04/measuring-distance-between-objects-in-an-image-with-opencv/
-4. https://www.khanacademy.org/science/physics/geometric-optics/lenses/v/object-image-and-focal-distance-relationship-proof-of-          formula
-5. https://www.khanacademy.org/science/ap-physics-1/ap-centripetal-force-and-gravitation/introduction-to-uniform-circular-motion-ap/v/distance-or-arc-length-from-angular-displacement
+### 3️⃣ Install Dependencies
 
+```bash
+pip install -r Requirements.txt
+```
 
+## 🧪 Usage
 
+### 🔹 Image Detection
 
+1. Place your image in the `Input Images` folder.
+2. Run the script:
+
+```bash
+python image_detection_yolov8.py
+```
+
+3. The processed image will be saved in the `Output images` folder.
+
+### 🔹 Video Detection
+
+1. Place your video in the `Input Frame` folder.
+2. Run the script:
+
+```bash
+python video_detection_yolov8.py
+```
+
+3. The processed video will be saved in the `Output Frame` folder. FPS and detection results will be displayed in real time.
+
+## 📦 Requirements
+
+* Python 3.8+
+* OpenCV 4.6+
+* PyTorch 2.1+
+* Ultralytics 8.0+
+* NumPy, Pandas, Matplotlib
+
+Install everything using:
+
+```bash
+pip install -r Requirements.txt
+```
+
+## 🧠 Technologies Used
+
+| Library | Purpose |
+|---------|---------|
+| YOLOv8 (Ultralytics) | Object detection model |
+| OpenCV | Image and video processing |
+| PyTorch | Deep learning framework |
+| NumPy / Pandas | Data handling |
+| Matplotlib | Visualization (optional) |
+
+## 📸 Example Results
+
+| Input | Output |
+|-------|--------|
+| ![Input Image](path/to/input.jpg) | ![Output Image](path/to/output.jpg) |
+
+*(Replace the image paths with your actual samples once uploaded.)*
+
+## 🧰 Future Enhancements
+
+* Add object counting and tracking
+* Integrate with webcam/live stream
+* Add distance estimation and object measurement
+* Deploy as a web app with Streamlit
+
+## 👨‍💻 Author
+
+**Mazharul Islam Tusar**  
+📧 mazharul.tusar@outlook.com  
+💻 GitHub: [@mazharsnow](https://github.com/mazharsnow)
+
+## 🏷️ GitHub Topics
+
+```
+object-detection, yolov8, computer-vision, deep-learning, pytorch, opencv,
+ultralytics, real-time-detection, ai-project, python
+```
+
+## 📜 License
+
+This project is released under the MIT License — free to use, modify, and distribute with attribution.
