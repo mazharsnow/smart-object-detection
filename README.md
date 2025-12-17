@@ -104,9 +104,11 @@ pip install -r Requirements.txt
 
 ## 📸 Example Results
 
+
 | Input | Output |
-|-------|--------|
-| ![Input Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Input%20Images/room.jpg) | ![Output Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Output%20images/output_room.jpg) |
+|-------|---------|
+| <img src="https://github.com/mazharsnow/smart-object-detection/blob/master/Input%20Images/room.jpg" width="500"> | <img src="https://github.com/mazharsnow/smart-object-detection/blob/master/Output%20images/output_room.jpg" width="500"> |
+
 
 ## 🧰 Future Enhancements
 
