@@ -76,11 +76,15 @@ python video_detection_yolov8.py
 
 ## 📦 Requirements
 
-* Python 3.8+
-* OpenCV 4.6+
-* PyTorch 2.1+
-* Ultralytics 8.0+
-* NumPy, Pandas, Matplotlib
+* Python >= 3.8
+* opencv>=4.10.0.84
+* numpy>=1.26.3
+* pandas>=2.2.3
+* torch>=2.3.0
+* ultralytics>=8.3.0
+* matplotlib>=3.9.2
+* scikit-learn>=1.5.2
+* albumentations>=1.4.8
 
 Install everything using:
 
@@ -102,7 +106,7 @@ pip install -r Requirements.txt
 
 | Input | Output |
 |-------|--------|
-| ![Input Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Input%20Images/room.jpg) | ![Output Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Output%20images/output_room.jpg)) |
+| ![Input Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Input%20Images/room.jpg) | ![Output Image](https://github.com/mazharsnow/smart-object-detection/blob/master/Output%20images/output_room.jpg) |
 
 ## 🧰 Future Enhancements
 
