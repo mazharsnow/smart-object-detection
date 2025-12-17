@@ -7,9 +7,9 @@ __pycache__/
 *.pt
 *.pyd
 *.dll
-*.mp4
-*.jpg
-*.png
+#*.mp4
+#*.jpg
+#*.png
 runs/
 
 # System junk
